@@ -13,22 +13,23 @@ class StockMasta:
             self.loop_thru_array(min, max)
 
     def loop_thru_array(self, min, max):
-        print(min)
-        print(max)
         for i, x in enumerate(self.stocks):
             if (x == max) and (i != 0):
                 self.max_index.append(i)
-                print(self.max_index)
             elif (x == min) and (self.index_check()):
-                print(self.min_index)
                 self.min_index.append(i)
 
         if self.min_index == []:
             del self.stocks[self.max_index[0]]
 
     def index_check(self):
+        if self.min_index == []:
+            return True
+
         for i in self.max_index:
+
             for index in self.min_index:
+
                 if index - i < 0:
                     return True
         return False
