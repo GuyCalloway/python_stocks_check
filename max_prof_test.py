@@ -39,6 +39,10 @@ class TestStockMasta(unittest.TestCase):
         stocks = StockMasta([1, 11, 12, 1, 2, 11, 10])
         self.assertEqual(stocks.max_diff(), 11)
 
+    def test_if_stockMasta_finds_min_loss(self):
+        stocks = StockMasta([12, 11, 10, 6, 5, 3, 2])
+        self.assertEqual(stocks.max_diff(), -1)
+
 
 if __name__ == '__main__':
     unittest.main()
