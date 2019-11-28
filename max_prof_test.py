@@ -16,11 +16,9 @@ class TestStockMasta(unittest.TestCase):
     #     self.assertEqual(stocks.min_index, [0])
     #     self.assertEqual(stocks.max_index, [2])
 
-    # def test_if_stockMasta_finds_max_difference_after(self):
-    #     stocks = StockMasta([10, 11, 12, 1, 2, 11, 10])
-    #     stocks.find_min_and_max2()
-    #     self.assertEqual(stocks.min_index2, [1])
-    #     self.assertEqual(stocks.max_index2, [3])
+    def test_if_stockMasta_finds_max_difference_after(self):
+        stocks = StockMasta([10, 11, 12, 1, 2, 11, 10])
+        self.assertEqual(stocks.max_diff(), 10)
 
     # def test_if_stockMasta_finds_max_difference_before2(self):
     #     stocks = StockMasta([10, 10, 10, 10, 10, 10, 10])
